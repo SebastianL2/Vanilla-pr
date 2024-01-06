@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- CCSS device-->
+    <link rel="stylesheet" href="src/styles.css">
+    <meta charset="UTF-8">
+    <title>About me</title>
+</head>
+
+
+<body>
+
+    <header>
+        <a id="texto1" class="Log">[S.C.P]</p>
+            <a id="texto2" class="Log">Sebastian Cely Peña</a>
+            <ul class="nav-menu">
+                <li>
+                    <a href="#">INICIO</a>
+                </li>
+                <li>
+                    <a href="#">CONTACTO</a>
+                </li>
+
+
+            </ul>
+    </header>
+    <script src="texalings.js">
+    </script>
+    <section>
+        <img src="src/IMAGES/stars.png" id="estrellas">
+        <img src="src/IMAGES/luna-01.png" id="luna">
+        <img src="src/IMAGES/ROCKS_BEHINF-01.png" id="rocks">
+        <h2 id="msj">HOLA QUE TAL!</h2>
+        <a href="#sec" id="btn">ACERCA DE MI</a>
+        <img src="src/IMAGES/FRONTB-01.png" id="FRONT">
+
+    </section>
+    <div class="pre" id="sec">
+        <h2>PRESENTACION</h2>
+        <p>Mi nombre es sebastian cely soy estudiante de 8avo semestre en ingenieria de sistemas y computacion en la
+            UPTC
+            y soy un desarrollador de software con experiencia en diferentes lenguajes
+            de programación como java,javascript,c/c++,linux (scripts),mysql,php, así como en metodologías ágiles y de
+            desarrollo de software.<br><br> Mi experiencia
+            incluye proyectos relevantes los cuales son presentados durante el PORTAFOLIO, y estoy siempre buscando
+            nuevos desafíos y oportunidades para aprender
+            y crecer en mi campo. Estoy altamente motivado y comprometido a producir código de alta calidad y a trabajar
+            en equipo para alcanzar objetivos comunes.Estoy seguro de que puedo contribuir de manera significativa en
+            cualquier proyecto en el que sea contratado. </p>
+    </div>
+    
+    <script>
+        var speed = 4;
+         
+        window.onscroll = function () {
+           
+            window.scrollTo(0, window.scrollY + speed);
+            if (window.scrollY > 150) {
+                document.getElementById("msj").style.display = "none";
+            }
+        };
+    </script>
+    <script>
+   
+        let estrellas = document.getElementById('estrellas');
+        let luna = document.getElementById('luna');
+        let FRONT = document.getElementById('FRONT');
+        let msj = document.getElementById('msj');
+        let btn = document.getElementById('btn');
+        let rocks = document.getElementById('rocks');
+        let header = document.querySelector('header');
+        window.addEventListener('scroll', function () {
+
+            let variante = window.scrollY;
+            estrellas.style.left = variante * 0.25 + 'px';
+            luna.style.top = variante * 1 + 'px';
+            rocks.style.top = variante * 1 + 'px';
+            btn.style.marginTop = variante * 1 + 'px';
+            msj.style.bottom = variante * 3 + 'px';
+            header.style.top = variante * 1 + 'px';
+
+
+        });
+
+    </script>
+</body>
+
+</html>
